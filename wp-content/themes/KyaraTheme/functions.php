@@ -22,3 +22,10 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+function kyarawp_register_style(){
+    wp_enqueue_style('kyarawp-bootstrap', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
+
+}
+
+add_action('wp_enqueue_scripts', 'kyarawp_register_style');

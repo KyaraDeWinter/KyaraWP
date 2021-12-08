@@ -58,6 +58,9 @@
   </header>
 
   <body>
+
+    <?php the_field('page_title'); ?>
+
     <!-- Intro -->
     <div class="container intro block">
         <div class="row">
