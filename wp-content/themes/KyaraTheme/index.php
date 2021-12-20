@@ -75,70 +75,38 @@
         </div>
     </div>
 
-    <ul>
-    <?php 
-    // Define our WP Query Parameters
-    $the_query = new WP_Query( 'posts_per_page=3' ); ?>
-    
-    
-    <?php 
-    // Start our WP Query
-    while ($the_query -> have_posts()) : $the_query -> the_post(); 
-    // Display the Post Title with Hyperlink
-    ?>
-    
-    
-    <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-    
-    
-    <li><?php 
-    // Display the Post Excerpt (automatisch text afkorten)
-    the_excerpt(__('(more…)'));
-    ?></li>
-    
-    
-    <?php 
-    // Repeat the process and reset once it hits the limit
-    endwhile;
-    wp_reset_postdata();
-    ?>
-    </ul>
 
     <div class="container block">
         <!-- (row of) Cards -->
         <div class="row">
-            <div class="col">
+
+            <?php $the_query = new WP_Query( 'posts_per_page=3' ); // Define our WP Query Parameters ?>
+            
+            <?php 
+            // Start our WP Query
+            while ($the_query -> have_posts()) : $the_query -> the_post(); 
+            // Display the Post Title with Hyperlink
+            ?>
+
+            <div class="col-4">
                 <div class="card">
                 <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?cs=srgb&dl=pexels-tranmautritam-326503.jpg&fm=jpg" class="card-img-top" alt="Image">
                     <div class="card-body">
-                        <h5 class="card-title">Title Blogpost 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Lees meer<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
+                        <a class="h5" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                        <p class="card-text"><?php the_excerpt(__('(more…)')); // Display the Post Excerpt (automatisch text afkorten) ?></p> 
                     </div>
                 </div>
             </div>
-            <div class="col">
-            <div class="card"> 
-                <img src="https://images.pexels.com/photos/8251157/pexels-photo-8251157.jpeg?cs=srgb&dl=pexels-pnw-production-8251157.jpg&fm=jpg" class="card-img-top" alt="Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Title Blogpost 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Lees meer<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-            <div class="card"> 
-                <img src="https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?cs=srgb&dl=pexels-negative-space-92904.jpg&fm=jpg" class="card-img-top" alt="Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Title Blogpost 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Lees meer<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
-                    </div>
-                </div>
-            </div>
+
+            <?php 
+            // Repeat the process and reset once it hits the limit
+            endwhile;
+            wp_reset_postdata();
+            ?>
+            
         </div>
     </div>
+    
 
     <!-- Quote -->
     <div class="quote block">
