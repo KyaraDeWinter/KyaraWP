@@ -90,8 +90,14 @@
 
             <div class="col-4">
                 <div class="card">
-                <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?cs=srgb&dl=pexels-tranmautritam-326503.jpg&fm=jpg" class="card-img-top" alt="Image">
-                    <div class="card-body">
+
+                <?php 
+                $image = get_field('image');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+
+                <div class="card-body">
                         <a class="h5" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                         <p class="card-text"><?php the_excerpt(__('(more…)')); // Display the Post Excerpt (automatisch text afkorten) ?></p> 
                     </div>
@@ -103,7 +109,7 @@
             endwhile;
             wp_reset_postdata();
             ?>
-            
+
         </div>
     </div>
     

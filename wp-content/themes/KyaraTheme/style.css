@@ -48,6 +48,16 @@ body {
     opacity: 70%;
 }
 
+.h5 {
+    text-decoration: none;
+    color: black;
+}
+
+.h5:hover {
+    text-decoration: none;
+    color: #646b53;
+}
+
 .quote {
     background-color: #F8F9FA;
     padding: 5rem;
