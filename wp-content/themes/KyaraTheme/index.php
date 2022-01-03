@@ -69,7 +69,8 @@
             </div>
             <div class="col-10">
                 <h5>Stagiaire bij Bureau Vet</h5>
-                <p>Mijn naam is Kyara, ik ben 19 jaar oud en op het moment zit ik in het tweede leerjaar van de opleiding Software Developing aan het ROC Nijmegen. In september startte ik met een half jaar stage lopen bij Bureau Vet.  Als stagiaire bij Bureau Vet wil ik graag te weten komen waar ik mij later verder in wil ontwikkelen door bij een aantal collega’s mee te kijken. Naast mijn studie ben ik graag bezig met mijn aquarium of ben ik te vinden in de voice chat van Discord met mijn vrienden!</p>
+                <p><?php the_field('intro_text'); ?></p>
+                <!-- Mijn naam is Kyara, ik ben 19 jaar oud en op het moment zit ik in het tweede leerjaar van de opleiding Software Developing aan het ROC Nijmegen. In september startte ik met een half jaar stage lopen bij Bureau Vet.  Als stagiaire bij Bureau Vet wil ik graag te weten komen waar ik mij later verder in wil ontwikkelen door bij een aantal collega’s mee te kijken. Naast mijn studie ben ik graag bezig met mijn aquarium of ben ik te vinden in de voice chat van Discord met mijn vrienden! -->
                 <a href="#" class="btn btn-primary">Lees meer over mij<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
             </div>
         </div>
