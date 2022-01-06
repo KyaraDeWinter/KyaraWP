@@ -81,7 +81,6 @@
             </div>
             <div class="col-10">
                 <p><?php the_field('intro_text'); ?></p>
-                <!--  -->
                 <a href="<?php echo $btn_link['url']; ?>" class="btn btn-primary"><?php echo $btn_link['title']; ?><i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
             </div>
         </div>
