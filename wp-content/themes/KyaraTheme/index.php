@@ -59,7 +59,19 @@
 
   <body>
 
-    <?php the_field('page_title'); ?>
+    <?php
+     $btn_link = get_the_field('intro_text'); ()  //btn_link 
+    ?>
+
+    <?php 
+    $link = get_field('link');
+    if( $link ): 
+        $link_url = $link['url'];
+        $link_title = $link['title'];
+        $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
+        <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+    <?php endif; ?>
 
     <!-- Intro -->
     <div class="container intro block">
@@ -68,10 +80,9 @@
                <img src="http://zultimate.com/wp-content/uploads/2019/12/default-profile.png" alt="Avatar">
             </div>
             <div class="col-10">
-                <h5>Stagiaire bij Bureau Vet</h5>
                 <p><?php the_field('intro_text'); ?></p>
-                <!-- Mijn naam is Kyara, ik ben 19 jaar oud en op het moment zit ik in het tweede leerjaar van de opleiding Software Developing aan het ROC Nijmegen. In september startte ik met een half jaar stage lopen bij Bureau Vet.  Als stagiaire bij Bureau Vet wil ik graag te weten komen waar ik mij later verder in wil ontwikkelen door bij een aantal collega’s mee te kijken. Naast mijn studie ben ik graag bezig met mijn aquarium of ben ik te vinden in de voice chat van Discord met mijn vrienden! -->
-                <a href="#" class="btn btn-primary">Lees meer over mij<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
+                <!--  -->
+                <a href="<?php echo $btn_link['url']; ?>" class="btn btn-primary"><?php echo $btn_link['title']; ?><i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
             </div>
         </div>
     </div>
