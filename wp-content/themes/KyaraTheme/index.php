@@ -25,10 +25,7 @@
                 <a class="nav-link" href="#">Home</a>
             </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Stage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="#">Blogs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Over Mij</a>
