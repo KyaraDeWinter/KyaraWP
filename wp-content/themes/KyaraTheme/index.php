@@ -59,22 +59,21 @@
 
   <body>
 
+    <?php the_field('page_title'); ?>
 
+    <?php
+     $btn_link = get_the_field('intro_text');
+    ?>
 
-    <!-- Intro -->
-    <div class="container intro block">
-        <div class="row">
-            <div class="col-2">
-               <img src="http://zultimate.com/wp-content/uploads/2019/12/default-profile.png" alt="Avatar">
-            </div>
-            <div class="col-10">
-                <h1><?php the_field('intro_title'); ?></h1>
-                <p><?php the_field('intro_text'); ?></p>
-                <a href="<?php echo $btn_link['url']; ?>" class="btn btn-primary"><?php echo $btn_link['title']; ?><i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
-            </div>
-        </div>
-    </div>
-
+    <?php 
+    $link = get_field('link');
+    if( $link ): 
+        $link_url = $link['url'];
+        $link_title = $link['title'];
+        $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
+        <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+    <?php endif; ?>
 
     <div class="container block">
         <!-- (row of) Cards -->
