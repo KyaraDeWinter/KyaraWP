@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://kit.fontawesome.com/5b23f4b030.js" crossorigin="anonymous"></script>
-        <title>Kyara WordPress</title>
+        <title>Kyara's stage bij Bureau Vet</title>
     </head>
 
   <header>
