@@ -25,6 +25,10 @@ body {
     background-color: #646b53;
 }
 
+.bg-primary {
+    background-color: #9EAA83 !important;
+}
+
 .carousel-item {
     height: 20rem;
 }
