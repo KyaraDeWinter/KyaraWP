@@ -43,36 +43,23 @@
 
     <!-- Carousel -->
     <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733852.jpg&fm=jpg" class="d-block w-100" alt="Image 1">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733852.jpg&fm=jpg" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.pexels.com/photos/8251157/pexels-photo-8251157.jpeg?cs=srgb&dl=pexels-pnw-production-8251157.jpg&fm=jpg" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/2014697/pexels-photo-2014697.jpeg?cs=srgb&dl=pexels-ylanite-koppens-2014697.jpg&fm=jpg" class="d-block w-100" alt="Image 3">
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/8251157/pexels-photo-8251157.jpeg?cs=srgb&dl=pexels-pnw-production-8251157.jpg&fm=jpg" class="d-block w-100" alt="Image 2">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.pexels.com/photos/2014697/pexels-photo-2014697.jpeg?cs=srgb&dl=pexels-ylanite-koppens-2014697.jpg&fm=jpg" class="d-block w-100" alt="Image 3">
-    </div>
-  </div>
-</div>
   </header>
 
   <body>
 
-    <?php
-     $btn_link = get_the_field('intro_text'); ()  //btn_link 
-    ?>
 
-    <?php 
-    $link = get_field('link');
-    if( $link ): 
-        $link_url = $link['url'];
-        $link_title = $link['title'];
-    ?>
-
-    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-
-    <?php endif; ?>
 
     <!-- Intro -->
     <div class="container intro block">
@@ -81,6 +68,7 @@
                <img src="http://zultimate.com/wp-content/uploads/2019/12/default-profile.png" alt="Avatar">
             </div>
             <div class="col-10">
+                <h1><?php the_field('intro_title'); ?></h1>
                 <p><?php the_field('intro_text'); ?></p>
                 <a href="<?php echo $btn_link['url']; ?>" class="btn btn-primary"><?php echo $btn_link['title']; ?><i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
             </div>
