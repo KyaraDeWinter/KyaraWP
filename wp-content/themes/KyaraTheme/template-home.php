@@ -12,24 +12,8 @@
     </head>
 
   <header>
-    <!-- Carousel Bootstrap
-    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733852.jpg&fm=jpg" class="d-block w-100" alt="Image 1">
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.pexels.com/photos/8251157/pexels-photo-8251157.jpeg?cs=srgb&dl=pexels-pnw-production-8251157.jpg&fm=jpg" class="d-block w-100" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.pexels.com/photos/2014697/pexels-photo-2014697.jpeg?cs=srgb&dl=pexels-ylanite-koppens-2014697.jpg&fm=jpg" class="d-block w-100" alt="Image 3">
-            </div>
-        </div>
-    </div> -->
-
-    <div class="slider">
-
-    </div>
+    <!-- Image Slider -->
+    <?php include 'blocks/slider.php';?>
   </header>
 
   <body>
@@ -41,9 +25,6 @@
     
     <!-- Quote -->
     <?php include 'blocks/quote.php';?>
-
-    <!-- Quote -->
-    <?php include 'blocks/contact_form.php';?>
 
     <!-- Footer -->
     <div class="footer block">
