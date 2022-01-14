@@ -29,75 +29,14 @@
   </header>
 
   <body>
+    <!-- Intro -->
+    <?php include 'blocks/intro.php';?>
 
-    <?php the_field('page_title'); ?>
-
-    <?php
-     $btn_link = get_the_field('intro_text');
-    ?>
-
-    <?php 
-    $link = get_field('link');
-    if( $link ): 
-        $link_url = $link['url'];
-        $link_title = $link['title'];
-        $link_target = $link['target'] ? $link['target'] : '_self';
-        ?>
-        <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-    <?php endif; ?>
-
-    <div class="container block">
-        <!-- (row of) Cards -->
-        <div class="row">
-            <?php $the_query = new WP_Query( 'posts_per_page=3' ); // Define our WP Query Parameters ?>
-
-            <?php 
-                // Start our WP Query
-                while ($the_query -> have_posts()) : $the_query -> the_post(); 
-                // Display the Post Title with Hyperlink
-            ?>
-
-            <div class="col-4">
-                <div class="card">
-
-                    <?php 
-                        $image = get_field('image');
-                        if( !empty( $image ) ): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-
-                    <div class="card-body">
-                        <a class="h5" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                        <p class="card-text"><?php the_excerpt(__('(more…)')); // Display the Post Excerpt (automatisch text afkorten) ?></p> 
-                    </div>
-                </div>
-            </div>
-
-            <?php 
-                // Repeat the process and reset once it hits the limit
-                endwhile;
-                wp_reset_postdata();
-            ?>
-        </div>
-    </div>
+    <!-- Row of cards (blogposts) -->
+    <?php include 'blocks/blog_card.php';?>
     
-
     <!-- Quote -->
-    <?php include 'quote.php';?>
-
-    <!-- Text/image -->
-    <div class="container textimage block">
-        <div class="row">
-            <div class="col-8">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iste eaque beatae recusandae nostrum perspiciatis veritatis saepe consectetur, ex quibusdam quam unde velit odit voluptatum sed error, veniam qui, obcaecati doloribus placeat iusto eveniet? Nesciunt sequi iste libero distinctio culpa!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nobis quis delectus, magnam magni tenetur? Numquam ipsam tempore repudiandae ut!</p>
-                <a href="#" class="btn btn-primary">Lees meer<i class="fas fa-chevron-right" style="margin-left: 1rem;"></i></a>
-            </div>
-            <div class="col-4">
-                <img src="https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?cs=srgb&dl=pexels-negative-space-92904.jpg&fm=jpg" alt="Image">
-            </div>
-        </div>
-    </div>
+    <?php include 'blocks/quote.php';?>
 
     <!-- Contact Text/Form  -->
     <div class="container block contact">
