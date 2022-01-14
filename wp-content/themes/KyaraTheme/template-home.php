@@ -26,35 +26,6 @@
     <!-- Quote -->
     <?php include 'blocks/quote.php';?>
 
-    <!-- Footer -->
-    <div class="footer block">
-        <div class="row footer-items">
-            <div class="col">
-                <h5>Lorem, ipsum dolor.</h5>
-                <hr>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div class="col">
-                <h5>Lorem, ipsum dolor.</h5>
-                <hr>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div class="col">
-                <h5>Contact</h5>
-                <hr>
-                <p><i class="fas fa-at" style="margin-right: 1rem;"></i><a href="mailto:kyaradewinter@gmail.com" style="color: white;">Stuur mij een email</a></p>
-                <p><i class="fab fa-linkedin-in" style="margin-right: 1rem;"></i>Maak een connectie op LinkedIn</p>
-                <p><i class="fab fa-instagram" style="margin-right: 1rem;"></i>Volg mij op Instagram</p>
-            </div>
-        </div>
-    </div>
-
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

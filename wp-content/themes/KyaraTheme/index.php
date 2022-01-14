@@ -12,20 +12,8 @@
     </head>
 
   <header>
-    <!-- Carousel -->
-    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733852.jpg&fm=jpg" class="d-block w-100" alt="Image 1">
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.pexels.com/photos/8251157/pexels-photo-8251157.jpeg?cs=srgb&dl=pexels-pnw-production-8251157.jpg&fm=jpg" class="d-block w-100" alt="Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.pexels.com/photos/2014697/pexels-photo-2014697.jpeg?cs=srgb&dl=pexels-ylanite-koppens-2014697.jpg&fm=jpg" class="d-block w-100" alt="Image 3">
-            </div>
-        </div>
-    </div>
+    <!-- Image Slider -->
+    <?php include 'blocks/slider.php';?>
   </header>
 
   <body>
@@ -38,52 +26,23 @@
     <!-- Quote -->
     <?php include 'blocks/quote.php';?>
 
-    <!-- Contact Text/Form  -->
-    <div class="container block contact">
-        <div class="row">
-            <div class="col-6">
-                <h5>Neem contact met mij op!</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nemo ut ducimus saepe laudantium. Dolorem deserunt architecto magni ullam aliquid!</p>
-            </div>
-            <div class="col-6">
-            <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="textAreaExample">Message</label>
-                <textarea class="form-control" id="textAreaExample1" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Verzend bericht<i class="far fa-paper-plane" style="margin-left: 1rem;"></i></button>
-            </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <div class="footer block">
         <div class="row footer-items">
             <div class="col">
-                <h5>Lorem, ipsum dolor.</h5>
+                <h5>Menu</h5>
                 <hr>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div class="col">
-                <h5>Lorem, ipsum dolor.</h5>
-                <hr>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
-                <p>Lorem ipsum dolor sit.</p>
+                <p>Home</p>
+                <p>Blogs</p>
+                <p>Over mij</p>
+                <p>Contact</p>
             </div>
             <div class="col">
                 <h5>Contact</h5>
                 <hr>
                 <p><i class="fas fa-at" style="margin-right: 1rem;"></i><a href="mailto:kyaradewinter@gmail.com" style="color: white;">Stuur mij een email</a></p>
-                <p><i class="fab fa-linkedin-in" style="margin-right: 1rem;"></i>Maak een connectie op LinkedIn</p>
-                <p><i class="fab fa-instagram" style="margin-right: 1rem;"></i>Volg mij op Instagram</p>
+                <p><i class="fab fa-linkedin-in" style="margin-right: 1rem;"></i><a href="https://www.linkedin.com/in/kyara-de-winter-7919071b0/" target="_blank" style="color: white;">Maak een connectie op LinkedIn</a></p>
+                <p><i class="fab fa-instagram" style="margin-right: 1rem;"></i><a href="https://www.instagram.com/xdewinter/" target="_blank" style="color: white;">Volg mij op Instagram</a></p>
             </div>
         </div>
     </div>

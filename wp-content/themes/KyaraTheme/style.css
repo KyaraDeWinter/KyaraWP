@@ -79,13 +79,16 @@ body {
 }
 
 .footer {
+    width: 100%;
     padding: 3rem;
     color: white;
     background-color: rgb(53, 53, 53);
+    margin-bottom: -4rem;
+    position: absolute;
 }
 
 .footer-items {
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 50%;
 }
