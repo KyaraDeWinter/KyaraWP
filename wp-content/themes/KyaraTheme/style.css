@@ -68,6 +68,18 @@ body {
     text-align: center;
 }
 
+a {
+    color: #6d745d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #9EAA83;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 .textimage img {
     border-radius: 0.5rem;
 }
