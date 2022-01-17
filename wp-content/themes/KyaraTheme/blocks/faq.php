@@ -24,11 +24,11 @@ for (i = 0; i < acc.length; i++) {
 <?php
 
 // check if the repeater field has rows of data
-if( have_rows('faq') ):
+if( have_rows('accordion') ):
 	
  	
  	// loop through the rows of data for the tab header
-    while ( have_rows('faq') ) : the_row();
+    while ( have_rows('accordion') ) : the_row();
 		
 		$question = get_sub_field('faq_question');
 		$answer = get_sub_field('faq_answer');
