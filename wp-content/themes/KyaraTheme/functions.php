@@ -28,4 +28,21 @@ function kyarawp_register_style(){
 
 }
 
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'faq',
+            'title'             => __('faq'),
+            'description'       => __('A custom FAQ accordion block.'),
+            'render_template'   => 'blocks/faq.php',
+            'keywords'          => array( 'faq'),
+        ));
+    }
+}
+
 add_action('wp_enqueue_scripts', 'kyarawp_register_style');
