@@ -21,6 +21,54 @@ for (i = 0; i < acc.length; i++) {
 
 </script>
 
+<style>
+
+/* Style the buttons that are used to open and close the accordion panel */
+.faq {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  border: none;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .faq:hover,
+button:focus {
+  background-color: #ccc;
+  background: #ccc;
+  border: none;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+
+}
+
+.faq:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+	
+</style>
+
 <?php
 
 // check if the repeater field has rows of data
