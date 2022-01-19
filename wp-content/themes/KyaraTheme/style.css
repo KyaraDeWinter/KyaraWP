@@ -104,3 +104,15 @@ a:hover {
     margin-right: auto;
     width: 50%;
 }
+
+/* contact form button */
+.btn-outline-primary, .wpcf7 input[type=submit] {
+    color: black;
+    border-color: #9EAA83;
+}
+
+.wpcf7 input[type=submit]:hover {
+    background-color: #9EAA83;
+    color: black;
+    border-color: #9EAA83;
+}
